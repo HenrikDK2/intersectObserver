@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="main.js" defer></script>
+    <title>intersectObserver hygge</title>
+    <style>
+        @keyframes gravity {
+            from{
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            to{
+                transform: translateY(522px) rotate(97deg);
+            }
+        }
+
+        @keyframes tree-rustling{
+            0%{
+                transform: translateX(10px);
+            }
+            
+            50%{
+                transform: translateX(-10px);
+            }
+            
+            100%{
+                transform: translateX(10px);
+            }
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+
+        .appletree{
+            margin: 2000px auto 0 auto;
+            width: 250px;
+            position: relative;
+            height: 600px;
+        }
+
+        .apple{
+            position: absolute;
+            top: 50px;
+            left: 40px;
+            transform: translateY(522px) rotate(97deg);
+            animation: gravity .5s ease-in;
+        }
+
+        .appletree__img{
+            display: block;
+            width: 100%;
+        }
+
+        .dirt{
+            margin: 0;
+            max-width: 100vw;
+        }
+
+        .dirt__img{
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        .tree-rustling{
+            animation: tree-rustling .15s linear .2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <figure class="appletree">
+        <img class="appletree__img" src="appletree.png" alt="appletree">
+    </figure>
+
+    <figure class="dirt">
+        <img src="dirt.png" alt="dirt" class="dirt__img">
+    </figure>
+
+<template id="apple">
+    <img src="apple.png" alt="apple" class="apple">
+</template>
+</body>
+</html>
